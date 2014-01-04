@@ -13,18 +13,21 @@ public class Banking extends Job {
 
 	@Override
 	public boolean validate() {
-        return (ctx.backpack.select().id(401).count()!=13 
-        		|| ctx.backpack.select().id(1783).count()!=13);
+        return ((ctx.backpack.select().id(401).count()!=13 
+        		|| ctx.backpack.select().id(1783).count()!=13) || 
+        		(ctx.backpack.select().id(1775).count()>=1));
 	}
 
 	@Override
 	public void execute() {
+		while (ctx.backpack.select().id(1775).count()>=1){
+			
 		ctx.objects.select().id(bankID).nearest();
 		sleep(250, 350);
 		
             if (ctx.bank.open()) {
                 sleep(1000,3000);
-
+                if (ctx.bank.isOpen()){
                 	if (ctx.backpack.select().id(9075).count()<=1){
                         ctx.bank.withdraw(9075, 500);
                         sleep(1000,2000);
@@ -65,6 +68,8 @@ public class Banking extends Job {
 		}
 	}
 	}
+	}
+}
 
 
 	

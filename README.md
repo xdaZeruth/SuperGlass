@@ -8,7 +8,7 @@ Directions for use:
 
 NOTE:
 1. A LOT of checks still have to be implemented. 
-2. I've had succesful runs over an hour, but i'd still keep an eye on it.
+2. 
 
 TODO:
 1. Script continue checks (means it will keep going even after you run out of materials)

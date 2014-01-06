@@ -1,5 +1,4 @@
 package core;
-
 import org.powerbot.script.methods.MethodContext;
 import org.powerbot.script.methods.MethodProvider;
 

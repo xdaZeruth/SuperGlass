@@ -1,17 +1,21 @@
--Zeruth SuperGlass-
+SuperGlass
+==
+V0.60
 
-Directions for use:
+> Superheat Glass for 1.5M/hr courtesy of Zeruth.
 
-1. Make sure to have Astral/Fire Runes, Buckets of sand, and Seaweed in bank (preferrably next to each other).
-2. Be standing next to bank.
+Setup:
+--
+> 1. Equip Air staff, and have your stacks of Astral/Fire runes in your ctx.backpack :p
+> 2. Make sure to have your seaweed/bucket of sands close to each other in the bank.
+> 3. Stand next to your bank booth (or what have you), then START! 
 
+---WARNINGS---
+==
+This script will not stop due to lack of resources, start it wisely.
 
-NOTE:
-1. A LOT of checks still have to be implemented. 
-2. 
+This script cannot be paused/Input allowed/resumed/messed with. If you want to do something, you must stop it.
 
-TODO:
-1. Script continue checks (means it will keep going even after you run out of materials)
-2. Paint
-3. Inv Checks
-4. Calculations
+With that being said, Enjoy!
+--
+

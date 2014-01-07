@@ -27,43 +27,29 @@ public class Banking extends Job {
                 || (ctx.backpack.select().id(1775).count()>=1)){
 			
 		ctx.objects.select().id(bankID).nearest();
-		sleep(250, 350);
-		
+		sleep(250, 350);	
             if (ctx.bank.open()) {
-                sleep(500,1500);
                 	if (ctx.backpack.select().id(astral).count()<=1){
                         ctx.bank.withdraw(astral, 500);
-                        sleep(500, 1500);
                 	}            
                 	if (ctx.backpack.select().id(fire).count()<=5){
                         ctx.bank.withdraw(fire, 1000);
-                        sleep(500, 1500);
                 	}  
                 	while (ctx.backpack.select().id(seaweed).count()!=13 || ctx.backpack.select().id(bucketOfSand).count()!=13){
-                    	if (ctx.backpack.select().id(moltenGlass).count()>=1){
+                    	while (ctx.backpack.select().id(moltenGlass).count()>=1){
                             ctx.bank.deposit(moltenGlass, ctx.backpack.select().id(moltenGlass).count());
-                            sleep(500, 1500);
-                    	}
-                    	if (ctx.backpack.select().id(seaweed).count()!=13){
-                            ctx.bank.deposit(seaweed, ctx.backpack.select().id(seaweed).count());
-                            sleep(500, 1500);
-                    	}
-                    	if (ctx.backpack.select().id(seaweed).count()!=13){
-                            ctx.bank.withdraw(seaweed, 13);
-                            sleep(500, 1500);
-                    	}            		
-                    	if (ctx.backpack.select().id(bucketOfSand).count()!=13){
-                            ctx.bank.deposit(bucketOfSand, ctx.backpack.select().id(bucketOfSand).count());
-                            sleep(500, 1500);
-                    	}
-                    	if (ctx.backpack.select().id(bucketOfSand).count()!=13){
-                            ctx.bank.withdraw(bucketOfSand, 13);
-                            sleep(500, 1500);
+                            	ctx.bank.deposit(seaweed, ctx.backpack.select().id(seaweed).count());
+                            	if (ctx.backpack.select().id(seaweed).count()!=13){
+                            		ctx.bank.withdraw(seaweed, 13);
+                            	}
+                            	ctx.bank.deposit(bucketOfSand, ctx.backpack.select().id(bucketOfSand).count());
+                            	if (ctx.backpack.select().id(bucketOfSand).count()!=13){
+                            		ctx.bank.withdraw(bucketOfSand, 13);
+                            	}
                     	}
                     	if (ctx.backpack.select().id(seaweed).count()==13 && ctx.backpack.select().id(bucketOfSand).count()==13){                       	
-                    	Utils.log("---Banked---");
-                        ctx.bank.close();
-                        sleep(500, 1500);                 
+                    		ctx.bank.close();
+                    		Utils.log("---Banked---");                 
                     	}
                 	}
             	}

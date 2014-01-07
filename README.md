@@ -1,8 +1,8 @@
 SuperGlass
 ==
-V0.60
+V0.65
 
-> Superheat Glass for 1.5M/hr courtesy of Zeruth.
+> Superheat Glass for 2M/hr courtesy of Zeruth.
 
 Setup:
 --
@@ -12,9 +12,7 @@ Setup:
 
 ---WARNINGS---
 ==
-This script will not stop due to lack of resources, start it wisely.
-
-This script cannot be paused/Input allowed/resumed/messed with. If you want to do something, you must stop it.
+This script will not stop due to lack of resources, dont leave it with only enough resources for 10 minutes.
 
 With that being said, Enjoy!
 --

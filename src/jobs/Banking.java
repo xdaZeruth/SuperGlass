@@ -26,8 +26,8 @@ public class Banking extends Job {
 		while ((ctx.backpack.select().id(401).count()!=13 || ctx.backpack.select().id(1783).count()!=13) 
                 || (ctx.backpack.select().id(1775).count()>=1)){
 			
-		ctx.objects.select().id(bankID).nearest();
-		sleep(250, 350);	
+			ctx.objects.select().id(bankID).nearest();
+			sleep(250, 350);	
             if (ctx.bank.open()) {
                 	if (ctx.backpack.select().id(astral).count()<=1){
                         ctx.bank.withdraw(astral, 500);
@@ -36,7 +36,6 @@ public class Banking extends Job {
                         ctx.bank.withdraw(fire, 1000);
                 	}  
                 	while (ctx.backpack.select().id(seaweed).count()!=13 || ctx.backpack.select().id(bucketOfSand).count()!=13){
-                    	while (ctx.backpack.select().id(moltenGlass).count()>=1){
                             ctx.bank.deposit(moltenGlass, ctx.backpack.select().id(moltenGlass).count());
                             	ctx.bank.deposit(seaweed, ctx.backpack.select().id(seaweed).count());
                             	if (ctx.backpack.select().id(seaweed).count()!=13){
@@ -46,7 +45,6 @@ public class Banking extends Job {
                             	if (ctx.backpack.select().id(bucketOfSand).count()!=13){
                             		ctx.bank.withdraw(bucketOfSand, 13);
                             	}
-                    	}
                     	if (ctx.backpack.select().id(seaweed).count()==13 && ctx.backpack.select().id(bucketOfSand).count()==13){                       	
                     		ctx.bank.close();
                     		Utils.log("---Banked---");                 

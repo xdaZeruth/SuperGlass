@@ -5,7 +5,7 @@ import core.Job;
 
 public class Heating extends Job {
 	
-	public int casts, money, craftxp, magicxp, glass, every5 = 0;
+	public static int casts, money, craftxp, magicxp, glass, every5;
 	private final int bucketOfSand = 1783;
 	private final int moltenGlass = 1775;
 	private final int seaweed = 401;
@@ -23,6 +23,9 @@ public class Heating extends Job {
 	
 	@Override
 	public void execute() {
+		if (ctx.bank.isOpen()){
+			ctx.bank.close();
+		}
 		if (ctx.backpack.select().id(moltenGlass).count()==0){
 			while (ctx.backpack.select().id(moltenGlass).count()==0){
 					sleep(1000,2000);

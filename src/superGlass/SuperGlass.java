@@ -17,7 +17,7 @@ import org.powerbot.event.PaintListener;
 
 import utils.Utils;
 
-@Manifest(name = "SuperGlass 0.65", description = "Superheat Glass for 2M/hr courtesy of Zeruth.")
+@Manifest(name = "SuperGlass 0.70", description = "Superheat Glass for 2M/hr courtesy of Zeruth.")
 public class SuperGlass extends PollingScript implements PaintListener{
 	private List<Job> jobList = new ArrayList<Job>();	
 	public static long startTime = System.currentTimeMillis();
